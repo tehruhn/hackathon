@@ -55,7 +55,7 @@ Representational alignment can help machines learn useful representations from h
 ## 🏁 Quickstart
 
 1. **Choose your team**: [🟦 Blue (universality)](#-blue-team) or [🟥 Red (idiosyncracy)](#-red-team).
-2. **Fork the repository** following our [setup instructions](#-getting-started).
+2. **Fork and/or the repository** following our [setup instructions](#-getting-started).
 3. **Explore the example notebooks** in our [starter code section](#-getting-started).
 4. **Submit your findings** using our [submission process](#-submission-process).
 
@@ -63,11 +63,11 @@ Good luck! 🍀
 
 ## 🎯 Challenge Overview
 
-We have **~1300 vision models** available, complete with metadata about architecture, training data, and more. This hackathon seeks to answer fundamental questions that have driven recent research in representational alignment ([Sucholutsky et al., 2023](); [Muttenthaler et al., 2024]()). Participants will join either a 🟦 Blue Team or a 🟥 Red Team, and provide JSON submissions that demonstrate the largest uniform set of models (Blue) or greatest differentiation among those models (Red).
+We have **over 1000 vision models** available to adjudicate  This hackathon seeks to answer fundamental questions that have driven recent research in representational alignment ([Sucholutsky et al., 2023](); [Muttenthaler et al., 2024]()). Participants will join either a 🟦 Blue Team or a 🟥 Red Team, and provide JSON submissions that demonstrate the largest uniform set of models (🟦) or greatest differentiation among those models (🟥).
 
 ### 🟦 Blue Team
 
-_"Finding unexpected similarities."_
+_"Find similarities."_
 Building on work showing that different networks can learn similar representations at scale, Blue Teams search for cases where this convergence occurs.
 
 - **🎯 Objective**: Submit a collection of models demonstrating representational and/or functional equivalence.
@@ -76,7 +76,7 @@ Building on work showing that different networks can learn similar representatio
 
 ### 🟥 Red Team
 
-_"Prompting idiosyncratic distinctions."_
+_"Drive distinctions."_
 Following approaches that examine models presumed to be aligned to uncover representational differences, Red Teams develop stimuli that drive misalignment in model representations.
 
 - **🎯 Objective**: Curate stimuli that reveal representational and/or functional differences.
@@ -85,54 +85,51 @@ Following approaches that examine models presumed to be aligned to uncover repre
 
 ## 🚀 Getting Started
 
-### 1️⃣ Fork & Clone Repository
+### 1️⃣ Fork and/or Clone Repository
 
-1. **Fork this repository**:
+*Optional*: Do you want to make a submission? Then **fork this repository**:
 
-    Click the **Fork** button near the top of the page to fork your own copy of representational-alignment/hackathon. You must be logged into GitHub.
+Click the **Fork** button near the top of the page to fork your own copy of `representational-alignment/hackathon`. You must be logged into GitHub.
 
-    ⚠️ **Important**: Uncheck "Copy the main branch only" to include all branches, including branches used for submission!
+⚠️ **Important**: Uncheck "Copy the main branch only" to include all branches, including branches used for submission!
 
-2. **Clone and setup**:
-    ```bash
-    git clone [YOUR_FORK_URL]
-    cd hackathon/
-    git checkout main
-    git checkout -b <team_color>_team_submissions  # blue or red
-    ```
+**Clone and setup**:
+```bash
+git clone [YOUR_FORK_URL]
+cd hackathon/
+git checkout main
+git checkout -b <team_color>_team_submissions  # blue or red
+```
 
 ### 2️⃣ Environment Setup
 
-#### Option A: Using `uv` (Recommended) ⚡
+Install [`uv`](https://astral.sh/) and dependencies:
 
 ```bash
-# Install uv if you haven't already
+# Install uv if you haven't already.
+# On macOS and Linux:
 curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# On Windows:
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 
 # Setup environment
 uv sync
 
 # Activate environment for Python commands
 source .venv/bin/activate
-
-# Example: Launch Jupyter Lab
-uv run --with jupyter jupyter lab
-```
-
-#### Option B: Using Conda 🐍
-
-```bash
-# Create environment
-conda create -n realign-metrics python>=3.12
-conda activate realign-metrics
-
-# Install dependencies
-pip install -r requirements.txt
 ```
 
 ### 3️⃣ Example Notebooks
 
 We've provided starter notebooks to help you get started with the hackathon. These can be found in [`examples/`](examples/).
+
+Use this command to launch them!
+
+```bash
+# Example: Launch Jupyter Lab
+uv run --with jupyter jupyter lab
+```
 
 | Notebook                       | Purpose                      | Teams     |
 | ------------------------------ | ---------------------------- | --------- |
